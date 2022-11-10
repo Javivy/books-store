@@ -8,7 +8,7 @@ const defaultState = [];
 export default function categoriesReducer(state = defaultState, action) {
   switch (action.type) {
     case CHECK_STATUS:
-      return console.log('Under Construction');
+      return 'Under Construction';
     default:
       return state;
   }
