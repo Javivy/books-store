@@ -1,5 +1,3 @@
-/* eslint-disable arrow-body-style */
-
 // Types
 const CHECK_STATUS = 'CHECK_STATUS';
 
@@ -17,8 +15,8 @@ export default function categoriesReducer(state = defaultState, action) {
 }
 
 // Actions
-export const checkStatus = () => {
-  return {
+export const checkStatus = () => (
+  {
     type: CHECK_STATUS,
-  };
-};
+  }
+);

@@ -1,5 +1,3 @@
-/* eslint-disable arrow-body-style */
-
 // Constants
 const defaultState = [];
 
@@ -27,17 +25,15 @@ export default function bookReducer(state = defaultState, action) {
 }
 
 // Actions
-export const addBook = (title, author) => {
-  return {
-    type: ADD_BOOK,
-    title,
-    author,
-  };
-};
+export const addBook = (title, author) => ({
+  type: ADD_BOOK,
+  title,
+  author,
+});
 
-export const removeBook = (index) => {
-  return {
+export const removeBook = (index) => (
+  {
     type: REMOVE_BOOK,
     index,
-  };
-};
+  }
+);
