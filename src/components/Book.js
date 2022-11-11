@@ -2,9 +2,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import uniqid from 'uniqid';
 import React, { useEffect } from 'react';
-import { removeBook } from '../redux/books/books.js';
-import { addBook, getBooks } from '../redux/books/booksApi.js';
-import { apiRemoveBook } from '../api/booksApi.js';
+import { addBook, getBooks, removeBook } from '../redux/books/booksApi.js';
 
 const Book = () => {
   const dispatch = useDispatch();
@@ -20,8 +18,7 @@ const Book = () => {
         <p>{book.title}</p>
         <p>{book.author}</p>
         <button onClick={() => {
-          console.log(book);
-          apiRemoveBook(myState.books.indexOf(book));
+          dispatch(removeBook(book.item_id));
         }}>Remove</button>
       </div>
     ))
