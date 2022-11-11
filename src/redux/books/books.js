@@ -4,12 +4,14 @@ const defaultState = [
   {
     title: 'The little prince',
     author: 'Antoine de Saint-Exupéry',
-    id: uniqid(),
+    item_id: uniqid(),
+    category: 'Fiction',
   },
   {
     title: 'The aclhemist',
     author: 'Paulo Coelho',
-    id: uniqid(),
+    item_id: uniqid(),
+    category: 'Fiction',
   },
 ];
 

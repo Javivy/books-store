@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books.js';
+import uniqid from 'uniqid';
+import { addBook } from '../redux/books/booksApi.js';
 
 const NewBook = () => {
   const dispatch = useDispatch();
@@ -23,16 +24,24 @@ const NewBook = () => {
       <h2>Add a new book</h2>
       <input id='title' type='text' placeholder="Add Title"/>
       <input id='author' type='text' placeholder="Add Author"/>
+      <input id='category' type='text' placeholder="Add Category"/>
       <button type="button" onClick={() => {
         const title = document.getElementById('title');
         const author = document.getElementById('author');
-        if (title.value === '' && author.value === '') {
-          alert('Make sure you write both title and author');
+        const category = document.getElementById('category');
+        if (title.value === '' && author.value === '' && category.value === '') {
+          alert('Make sure you are writing title, author and category');
         } else {
-          dispatch(addBook(title.value, author.value));
+          dispatch(addBook({
+            title: title.value,
+            author: author.value,
+            category: category.value,
+            item_id: uniqid(),
+          }));
         }
         title.value = '';
         author.value = '';
+        category.value = '';
       }}>
         Add Book
       </button>
