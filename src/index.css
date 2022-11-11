@@ -7,13 +7,13 @@
 }
 
 body {
-  margin: 9.313rem 3.75rem 7.688rem 6.25rem;
+  margin: 3rem;
   background-color: #f5f6fa;
 }
 
 #root {
   background: #fff;
-  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.10);
   border-radius: 4px;
 }
 
@@ -24,7 +24,6 @@ body {
   justify-content: space-between;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
 }
 
 .navbar-header {
@@ -35,6 +34,7 @@ body {
 .navbar-title {
   margin: 1rem 2rem;
   color: #0290ff;
+  font-weight: bold;
 }
 
 .link-item {
@@ -42,6 +42,7 @@ body {
   color: #aaa;
   margin: 0 1rem;
   transition: color 0.3s;
+
 }
 
 .link-item:hover {
@@ -54,6 +55,10 @@ body {
   border: 1px solid #e8e8e8;
   color: #0290ff;
   border-radius: 50%;
+}
+
+.user-icon:hover {
+  cursor: pointer;
 }
 
 /** BOOKS CONTAINER */
