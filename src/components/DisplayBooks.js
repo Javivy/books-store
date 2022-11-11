@@ -4,7 +4,6 @@ import Book from './Book.js';
 
 const DisplayBooks = () => {
   const myState = useSelector((store) => store);
-  console.log(myState.books);
 
   return (
     <div>
