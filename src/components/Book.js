@@ -1,20 +1,24 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-useless-constructor */
+import { useSelector, useDispatch } from 'react-redux';
 import React from 'react';
+import { removeBook } from '../redux/books/books.js';
 
-class Book extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const Book = () => {
+  const myState = useSelector(((state) => state));
+  const dispatch = useDispatch();
 
-  render() {
-    return (
-      <div className="book-item">
-        <p>{this.props.title}</p>
-        <p>{this.props.author}</p>
+  return (
+    myState.books.map((book) => (
+      <div className="book-item" key={book.id}>
+        <p>{book.title}</p>
+        <p>{book.author}</p>
+        <button onClick={() => {
+          dispatch(removeBook(myState.books.indexOf(book)));
+        }}>Remove</button>
       </div>
-    );
-  }
-}
+    ))
+  );
+};
 
 export default Book;

@@ -1,7 +1,16 @@
-const Categories = () => (
+import { useDispatch } from 'react-redux';
+import { checkStatus } from '../redux/categories/categories.js';
+
+const Categories = () => {
+  const dispatch = useDispatch();
+
+  return (
     <div className="categories-container">
-      <button>Check Status</button>
+      <button onClick={() => {
+        dispatch(checkStatus());
+      }}>Check Status</button>
     </div>
-);
+  );
+};
 
 export default Categories;
