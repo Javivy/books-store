@@ -1,5 +1,17 @@
+import uniqid from 'uniqid';
 // Constants
-const defaultState = [];
+const defaultState = [
+  {
+    title: 'The little prince',
+    author: 'Antoine de Saint-Exupéry',
+    id: uniqid(),
+  },
+  {
+    title: 'The aclhemist',
+    author: 'Paulo Coelho',
+    id: uniqid(),
+  },
+];
 
 // Types
 const ADD_BOOK = 'ADD_BOOK';
@@ -9,16 +21,19 @@ const REMOVE_BOOK = 'REMOVE_BOOK';
 export default function bookReducer(state = defaultState, action) {
   switch (action.type) {
     case ADD_BOOK:
-      return {
+      return [
         ...state,
-        title: action.title,
-        author: action.author,
-        index: state.length,
-      };
+        {
+          title: action.title,
+          author: action.author,
+          id: uniqid(),
+        },
+      ];
     case REMOVE_BOOK:
-      return {
-        ...state.filter((book, i) => i !== book.index),
-      };
+      return [
+        ...state.slice(0, action.index),
+        ...state.slice(action.index + 1, state.length),
+      ];
     default:
       return state;
   }

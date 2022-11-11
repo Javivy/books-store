@@ -19,7 +19,7 @@ class App extends React.Component {
         <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route path='/' element={[<DisplayBooks />, <NewBook />]} />
+            <Route path='/' element={[<DisplayBooks key='display-books'/>, <NewBook key='new-book'/>]} />
             <Route path='/categories' element={<Categories />} />
           </Routes>
         </BrowserRouter>
