@@ -6,7 +6,7 @@ const DisplayBooks = () => {
   const myState = useSelector((store) => store);
 
   return (
-    <div>
+    <div className='books-container'>
       <Book key='books' books={myState.books}/>
     </div>
   );

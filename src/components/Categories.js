@@ -6,9 +6,9 @@ const Categories = () => {
 
   return (
     <div className="categories-container">
-      <button onClick={() => {
+      <div className='categories-div' onClick={() => {
         dispatch(checkStatus());
-      }}>Check Status</button>
+      }}>Under Construction</div>
     </div>
   );
 };
