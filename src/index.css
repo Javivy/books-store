@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto+Slab:wght@400;500;600;700;800&display=swap');
 
 * {
   padding: 0;
@@ -64,6 +64,87 @@ body {
 /** BOOKS CONTAINER */
 .books-container {
   background: #f1f1f1;
+  padding: 1rem 0;
 }
 
 /* BOOKS */
+.book-container {
+  margin: 2rem 5rem;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+}
+
+.book-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  margin-left: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.book-data p {
+  margin: 0.2rem 0;
+}
+
+.book-data div {
+  margin: 1rem 0 0rem 0;
+}
+
+.book-category {
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  color: #aaa;
+}
+
+.book-title {
+  font-weight: bold;
+  color: #121212;
+  font-size: 1.375rem;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+.book-author {
+  color: #4386bf;
+  font-size: 0.875rem;
+}
+
+.book-link-item {
+  color: #4386bf;
+  padding: 0 0.5rem;
+  text-decoration: none;
+}
+
+.book-link-item:nth-child(1) {
+  padding: 0 0.5rem 0 0;
+  border-right: 1px solid #e8e8e8;
+}
+
+.book-link-item:nth-child(2) {
+  border-right: 1px solid #e8e8e8;  
+}
+
+.circle-progress circle {
+  width: 150px;
+  height: 150px;
+  fill: none;
+  stroke-width: 10;
+  stroke: #000;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+.circle-progress circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: #ccc;
+}
+
+.circle-progress circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 64) / 100);
+  stroke: #0290ff;
+}

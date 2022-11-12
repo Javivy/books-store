@@ -19,17 +19,19 @@ const Book = () => {
           <p className='book-title'>{book.title}</p>
           <p className='book-author'>{book.author}</p>
           <div className='book-links'>
-            <a className='book-link-item'>Comment</a>
+            <a className='book-link-item' href='#'>Comment</a>
             <a onClick={() => {
               dispatch(removeBook(book.item_id));
-            }} className='book-link-item'>Remove</a>
-            <a className='book-link-item'>Edit</a>
+            }} className='book-link-item' href='#'>Remove</a>
+            <a className='book-link-item' href='#'>Edit</a>
           </div>
         </div>
         <div className='book-progress-info'>
           <div className='progress-made'>
-            <div className='circle-progress'>
-            </div>
+            <svg className='circle-progress'>
+              <circle cx='70' cy='70' r='70'></circle>
+              <circle cx='70' cy='70' r='70'></circle>
+            </svg>
             <div className='progress-info'>
               <span className='progress'>64%</span>
               <span className='progress-completed'>Completed</span>
