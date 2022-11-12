@@ -13,7 +13,7 @@ body {
 
 #root {
   background: #f1f1f1;
-  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.10);
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
 
@@ -43,7 +43,6 @@ body {
   color: #aaa;
   margin: 0 1rem;
   transition: color 0.3s;
-
 }
 
 .link-item:hover {
@@ -96,7 +95,7 @@ body {
 }
 
 .book-data div {
-  margin: 1rem 0 0rem 0;
+  margin: 1rem 0 0 0;
 }
 
 .book-category {
@@ -130,7 +129,7 @@ body {
 }
 
 .book-link-item:nth-child(2) {
-  border-right: 1px solid #e8e8e8;  
+  border-right: 1px solid #e8e8e8;
 }
 
 /* PROGRESS */
@@ -209,6 +208,18 @@ body {
   font-weight: 300;
 }
 
+form button {
+  float: right;
+  padding: 0.8rem 2rem;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  background: #0290ff;
+  font-family: 'Roboto Slab', sans-serif;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 .progress-chapter button {
   margin: 1rem 0;
   padding: 0.5rem 2rem;
@@ -219,6 +230,10 @@ body {
   font-family: 'Roboto Slab', sans-serif;
   border-radius: 4px;
   cursor: pointer;
+}
+
+form button:hover {
+  background: #0079d6;
 }
 
 .progress-chapter button:hover {
@@ -251,22 +266,6 @@ form input {
 
 form input::placeholder {
   color: #aaa;
-}
-
-form button {
-  float: right;
-  padding: 0.8rem 2rem;
-  border: none;
-  text-transform: uppercase;
-  color: #fff;
-  background: #0290ff;
-  font-family: 'Roboto Slab', sans-serif;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background: #0079d6;
 }
 
 /** CATEGORIES */
