@@ -21,10 +21,10 @@ const NewBook = () => {
 
   return (
     <form onKeyDown={handleEnter}>
-      <h2>Add a new book</h2>
-      <input id='title' type='text' placeholder="Add Title"/>
-      <input id='author' type='text' placeholder="Add Author"/>
-      <input id='category' type='text' placeholder="Add Category"/>
+      <h2 className='form-title'>Add a new book</h2>
+      <input id='title' type='text' placeholder="Book Title"/>
+      <input id='author' type='text' placeholder="Book Author"/>
+      <input id='category' type='text' placeholder="Category"/>
       <button type="button" onClick={() => {
         const title = document.getElementById('title');
         const author = document.getElementById('author');
