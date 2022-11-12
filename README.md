@@ -13,7 +13,7 @@
 
 ## Live Demo
 
-[Not available yet](https://github.com/Javivy/books-store)
+[Book Store Live](https://books-store-javivy.netlify.app/)
 
 
 ## Getting Started
