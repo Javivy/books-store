@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import { useDispatch } from 'react-redux';
 import uniqid from 'uniqid';
 import { addBook } from '../redux/books/booksApi.js';
