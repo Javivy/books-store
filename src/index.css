@@ -76,8 +76,11 @@ body {
   align-items: center;
   border: 1px solid #e8e8e8;
   border-radius: 4px;
+  padding: 2rem 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
+/* BOOK DATA */
 .book-data {
   display: flex;
   flex-direction: column;
@@ -117,6 +120,7 @@ body {
   color: #4386bf;
   padding: 0 0.5rem;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .book-link-item:nth-child(1) {
@@ -128,15 +132,32 @@ body {
   border-right: 1px solid #e8e8e8;  
 }
 
+/* PROGRESS */
+.book-progress-info {
+  display: flex;
+  margin-right: 5rem;
+}
+
+.progress-made {
+  display: flex;
+  align-items: center;
+}
+
+.circle-progress {
+  width: 110px;
+  height: 110px;
+}
+
+/* PROGRESS CIRCLE */
 .circle-progress circle {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   fill: none;
   stroke-width: 10;
   stroke: #000;
   transform: translate(5px, 5px);
-  stroke-dasharray: 440;
-  stroke-dashoffset: 440;
+  stroke-dasharray: 330;
+  stroke-dashoffset: 330;
 }
 
 .circle-progress circle:nth-child(1) {
@@ -145,6 +166,61 @@ body {
 }
 
 .circle-progress circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 64) / 100);
+  stroke-dashoffset: calc(330 - (330 * 64) / 100);
   stroke: #0290ff;
 }
+
+/* PROGRESS INFO */
+.progress-info {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-number {
+  font-size: 2rem;
+  color: #121212;
+}
+
+.progress-completed {
+  color: #aaa;
+}
+
+/* DIVISOR LINE */
+.divisor-line {
+  margin: 0 3rem;
+  width: 2px;
+  background: #e8e8e8;
+}
+
+.progress-chapter p {
+  margin: 0.7rem 0;
+}
+
+.current-chapter {
+  text-transform: uppercase;
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
+.chapter-number {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.progress-chapter button {
+  margin: 1rem 0;
+  padding: 0.5rem 2rem;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  background: #0290ff;
+  font-family: 'Roboto Slab', sans-serif;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.progress-chapter button:hover {
+  background: #0079d6;
+}
+
